@@ -65,7 +65,7 @@ def criar_relatorio(modelo):
 def obter_numeros_bookmark(documento, prefixo):
     numeros = []
     for i in range(1, documento.Bookmarks.Count + 1):
-        correspondencia = re.fullmatch(rf"{prefixo}(\d+)", documento.Bookmarks(i).Name)
+        correspondencia = re.fullmatch(rf"{prefixo}(\d+)", documento.Bookmarks(i).Name, re.IGNORECASE)
         if correspondencia:
             numeros.append(int(correspondencia.group(1)))
     return sorted(numeros)
