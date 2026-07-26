@@ -5,3 +5,5 @@ dist/
 *.exe
 Relatórios/
 Modelo/
+Modelo_backup*/
+Modelo_preview/
